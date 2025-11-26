@@ -148,7 +148,7 @@
                 <div class="column is-four-fifths">
                     <h2 class="title is-3">Result</h2>
                     <div class="content has-text-justified">
-                        <p><b>Reasoning ability.</b></p><br>
+                        <p><b>Reasoning ability.</b></p>
                         <p>
                             The world model forces VLA to learn visual causal inference, particularly focusing on distant objects to generate better future frames. This enables the VLA model to predict potential dangers in advance, thereby ensuring driving safety. <br>  
                         </p>
@@ -159,17 +159,17 @@
                         </p>
                         <br>
 
-                        <p><b>Generating ability.</b></p><br>
+                        <p><b>Generating ability.</b></p>
                         <p>
                             UniUGP can generate trajectories and weather control as shown in the figure. This proves that the generation capability of our method is effective. <br>  
                         </p>
-                        <!--<img src="website/images/pic5.png" alt="Result"
-                                style="margin: 0 auto; display: block; max-width: 1000px; width: 100%; height: auto;" /><br>-->
+                        <img src="website/images/pic5.png" alt="Result"
+                                style="margin: 0 auto; display: block; max-width: 1000px; width: 100%; height: auto;" /><br>
                         <p>
                             Trajectory-controlled generation visualization. By modifying the trajectories input into the generation model, we can control the generation of future frames in the video. This demonstrates the controllability of our generation technology. <br>  
                         </p>
-                        <!--<img src="website/images/pic6.png" alt="Result"
-                                style="margin: 0 auto; display: block; max-width: 1000px; width: 100%; height: auto;" /><br>-->
+                        <img src="website/images/pic6.png" alt="Result"
+                                style="margin: 0 auto; display: block; max-width: 1000px; width: 100%; height: auto;" /><br>
                         <p>
                             Video generation visualization with controllable weather conditions. Our model can generate videos of different weather conditions, which proves the efficiency of our generation model. <br>  
                     </div>
@@ -178,308 +178,14 @@
             <!-- /Result -->
             
         </div>
-
-        
-        
-        <div class="container is-max-desktop">
-            <div class="is-centered has-text-centered">
-                <div class="custom-column-large">
-                    <div class="is-centered custom-column-large">
-                        <h4><b>AitW General</b><br>
-                            Search for some good Italian restaurants</h4>
-                        <div class="text-center">
-                            <div class="btn-group btn-group-toggle text-center task-selector" data-toggle="buttons">
-                                <button type="button" class="btn btn-outline-secondary btn-sm inline-vis-button" disabled>Visualization:</button>
-                                <button type="button" class="btn btn-outline-secondary btn-sm active" id="all-methods">All Methods</button>
-                                <button type="button" class="btn btn-outline-secondary btn-sm" id="each-method">Each Method (pause at wish)</button>
-                            </div>
-                        </div>
-                    </div>
-                        <br>
-                        <!-- All video -->
-                        <div id="all-video-container">
-                            <video controls autoplay muted loop>
-                                <source src="website/videos/general.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                    
-                        <!-- Each video -->
-                        <div id="each-video-container" style="display:none;">
-                            <video controls autoplay muted loop>
-                                <source src="website/videos/general/slice1.mp4" type="video/mp4">
-                            </video>
-                            <video controls autoplay muted loop>
-                                <source src="website/videos/general/slice2.mp4" type="video/mp4">
-                            </video>
-                            <video controls autoplay muted loop>
-                                <source src="website/videos/general/slice3.mp4" type="video/mp4">
-                            </video>
-                            <video controls autoplay muted loop>
-                                <source src="website/videos/general/slice4.mp4" type="video/mp4">
-                            </video>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="container is-max-desktop">
-            <div class="is-centered has-text-centered">
-                <div class="custom-column-large">
-                    <div class="custom-column-large">
-                        <h4><b>AitW Web Shopping</b><br>
-                            Go to newegg.com, and search for "Alienware Aurora"</h4>
-                        <div class="text-center">
-                            <div class="btn-group btn-group-toggle text-center task-selector" data-toggle="buttons">
-                                <button type="button" class="btn btn-outline-secondary btn-sm inline-vis-button" disabled>Visualization:</button>
-                                <button type="button" class="btn btn-outline-secondary btn-sm active" id="webshop-all-methods">All Methods</button>
-                                <button type="button" class="btn btn-outline-secondary btn-sm" id="webshop-each-method">Each Method (pause at wish)</button>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <!-- All video -->
-                    <div id="all-webshop-container">
-                        <video controls autoplay muted loop>
-                            <source src="website/videos/webshop.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    
-                    <!-- Each video -->
-                    <div id="each-webshop-container" style="display:none;">
-                        <video controls autoplay muted loop>
-                            <source src="website/videos/webshop/slice1.mp4" type="video/mp4">
-                        </video>
-                        <video controls autoplay muted loop>
-                            <source src="website/videos/webshop/slice2.mp4" type="video/mp4">
-                        </video>
-                        <video controls autoplay muted loop>
-                            <source src="website/videos/webshop/slice3.mp4" type="video/mp4">
-                        </video>
-                        <video controls autoplay muted loop>
-                            <source src="website/videos/webshop/slice4.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="hero teaser">
-        <div class="container is-max-desktop">
-            <div class="hero-body">
-
-                <h2 class="subtitle">
-                    <b>DigiRL</b> solves open-ended realistic Android tasks with an novel online reinforcement learning algorithm with autonomous VLM evaluator.
-                </h2>
-
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="benchmark-table-content" role="tabpanel"
-                        aria-labelledby="benchmark-table-content">
-
-                        <div id="benchmark-table"></div>
-                    </div>
-                    <div class="tab-pane fade" id="eurus-code-table-content" role="tabpanel"
-                        aria-labelledby="eurus-code-table-content">
-
-                        <p class="mt-2 px-2">
-                            This code subset follows the <a href="https://arxiv.org/abs/2404.02078">Eurus
-                                paper</a> and contains MBPP and HumanEval.
-                        </p>
-                    </div>
-                    <p class="mt-2 px-2">
-                        This table contains the success rate across all approaches measured in the DigiRL paper. It includes performance on
-                        two subsets: AitW General and AitW Web Shopping. The codename of GPT-4V we use is <i>gpt-4-vision-preview</i>
-                        and the codename of Gemini-1.5-Pro is <i>gemini-1.5-pro-latest</i>.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section" id="interaction-framework">
-        <div class="container is-max-desktop">
-
-            <div class="columns is-full-width">
-
-                <!-- Visual Effects. -->
-                <div class="column">
-                    <div class="text-justified">
-                        <h2 class="title is-3">DigiRL: Autonomous RL for Building a Strong Device-Control Agent</h2>
-
-                        <h3> Why RL over the alternatives? </h3>
-                        <ul class="custom-bullets">
-                            <li>LLM Agent data such as device-control actions is poorly represented in the pre-training corpus of <b>Off-the-shelf proprietary VLMs</b> such as GPT4V and Gemini-1.5-Pro.</li>
-                            <li><b>Supervised Fine-Tuning</b> 1) requires a large amount of human demonstration data and 2) cannot recover from degrading model performance when real websites/applications have changed. As shown in the plot below, a frozen good policy trained with prior data experiences a gradual drop in performance as the websites change over time, while the DigiRL policy constantly updates with fresh autonomous data can maintain a stable performance.</li>
-                        </ul>
-                    </div>
-                    <div class="text-center">
-                        <!-- button for visualizing offline or not -->
-                        <div class="btn-group btn-group-toggle text-center task-selector" data-toggle="buttons">
-                            <button type="button" class="btn btn-outline-secondary btn-sm inline-vis-button" disabled
-                                id="visualize-sr-vs-k-scale-with-model-size-llama2-base-disabled">Visualization:</button>
-                            <button type="button" class="btn btn-outline-secondary btn-sm active"
-                                id="exc-offline">Exclude Offline Results (click to visualize)</button>
-                            <button type="button" class="btn btn-outline-secondary btn-sm"
-                                id="inc-offline">Include Offline Results</button>
-                        </div>
-                    </div>
-                    <div class="text-justified">
-                        <div class="chart-container" id="chart-k2" style="display:block;margin:0 auto;">
-                            <canvas id="chart-sr-vs-k2"></canvas>
-                        </div>
-                        <h3> What are we using RL for?</h3>
-                        DigiRL consists of two steps:
-                        <ul class="custom-bullets">
-                            <li>First, we use <b>Offline RL</b> to make the most out of a potentially sub-optimal existing offline dataset.</li>
-                            <li>Then, we use <b>Offline-to-Online RL</b> to encourage the agent to learn from its own trials and errors.</li>
-                        </ul>
-                        DigiRL identifies the most simple yet effective RL design choices for device-control agent problems. Our RL algorithmic framework automatically achieves the following advantages compared to state-of-the-art alternatives such as rejection sampling (or Filtered Behavior Cloning):
-                        <ul class="custom-bullets">
-                            <li>We makes use of an <b>instruction-level value function</b> to implicitly construct an automatic curriculum that prioritizes on the tasks most informative to the agent.</li>
-                            <li>We makes use of a <b>step-level value function</b> to pick out the advantageous actions (actions that mark progress towards the goal) in a trajectory while leaving the noisy actions (actions that do not contribute to the goal).</li>
-                        </ul>
-                        Please check out our paper for more details of our algorithm!
-
-                        <div style="text-align:center;">
-                            <img src="website/images/algo.png" alt="illustrative-example"
-                                style="margin: 0 auto; display: block; max-width: 1000px; width: 100%; height: auto;" />
-                            <br>
-                        </div>
-                        <h3>Learning Curves</h3>
-                        <div class="text-justified" id="tool-augmented">
-                            In addition to the convergence performance reported in the paper, we also present the sample complexity comparison of DigiRL against the state-of-the-art alternative Filtered Behavior Cloning (or rejection sampling). We find that DigiRL not only converges to a superior performance, but also learns more efficiently.
-                        </div>
-                        <div class="text-center">
-                            <br>
-                            <div class="btn-group btn-group-toggle text-center task-selector" data-toggle="buttons">
-                                <button type="button" class="btn btn-outline-secondary btn-sm inline-vis-button" disabled
-                                    id="visualize-sr-vs-k-scale-with-model-size-llama2-base-disabled">Subset:</button>
-                                <button type="button" class="btn btn-outline-secondary btn-sm active"
-                                    id="visualize-sr-vs-k-scale-with-model-size-llama2-base">AitW General (click to visualize)</button>
-                                <button type="button" class="btn btn-outline-secondary btn-sm"
-                                    id="visualize-sr-vs-k-scale-with-model-size-llama2-rlhf">AitW Web Shopping</button>
-                            </div>
-                        </div>
-                        <div class="chart-container" id="chart-k" style="display:block;margin:0 auto;">
-                            <canvas id="chart-sr-vs-k"></canvas>
-                        </div>
-
-                    </div>
-                </div>
-                <!--/ Visual Effects. -->
-
-            </div>
-    </section>
-
-    <section class="section" id="evaluation">
-        <div class="container is-max-desktop">
-
-            <div class="columns is-full-width">
-
-                <!-- Visual Effects. -->
-                <div class="column">
-                    <div class="content">
-                        <h3 class="title is-3">Autonomous Evaluation</h3>
-                        <p>
-                            Our main results are autonomously evaluated with Gemini-1.5-Pro. We also manually evaluate on some subsets and finds that the autonomous evaluation results highly align with manual evaluations with an average difference less than 3%:
-                        </p>
-
-                        <div class="text-center">
-                            <div class="btn-group btn-group-toggle text-center feedback-provider-sort-by-selector"
-                                data-toggle="buttons">
-                                <button type="button" class="btn btn-outline-secondary btn-sm" disabled>Subset:</button>
-                                <button type="button" class="btn btn-outline-secondary btn-sm active"
-                                    id="sort-by-feedback-gain">
-                                    AitW General
-                                </button>
-
-                                <button type="button" class="btn btn-outline-secondary btn-sm"
-                                    id="sort-by-feedback-provider-perf">
-                                    AitW Web Shopping
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="chart-container" id="chart-feedback-p" style="display:block;margin:0 auto;">
-                            <canvas id="chart-feedback-provider"></canvas>
-                        </div>
-
-                        <h3>Failure Mode Analysis</h3>
-
-                        <p>
-                            While all the types of failure modes benefit from offline and offline-to-online RL training, the most consistent and significant reduction is for the failure mode of failing to recover from mistakes. By training on autonomously-collected rollouts, our agent DigiRL is able to learn from its own mistakes and reduces failures to recover over training.
-                        </p>
-
-                        <div class="text-center">
-                            <div class="btn-group btn-group-toggle text-center task-selector" data-toggle="buttons">
-                                <button type="button" class="btn btn-outline-secondary btn-sm" disabled>Subset:</button>
-                                <button type="button" class="btn btn-outline-secondary btn-sm active"
-                                    id="avg_micro">AitW General</button>
-                                <button type="button" class="btn btn-outline-secondary btn-sm"
-                                    id="reasoning">AitW Web Shopping</button>
-                            </div>
-
-
-                            <!-- <div class="btn-group btn-group-toggle text-center sort-by-selector" data-toggle="buttons">
-                                <button type="button" class="btn btn-outline-secondary btn-sm" disabled>Failure:</button>
-                                <button type="button" class="btn btn-outline-secondary btn-sm active"
-                                    id="sort-by-feedbacksr">Fail to recover from mistakes</button>
-                                <button type="button" class="btn btn-outline-secondary btn-sm"
-                                    id="sort-by-nofeedbacksr">Get stuck midway</button>
-                                <button type="button" class="btn btn-outline-secondary btn-sm"
-                                    id="sort-by-feedbackdelta">Arrive at wrong goal</button>
-                            </div> -->
-                        </div>
-
-                        <div class="chart-container" id="chart-feedback" style="position:relative;margin:0 auto;">
-                            <canvas id="chart-sr-w-feedback" style="max-height: 100%;"></canvas>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-    </section>
-
-    <section class="section" id="evaluation">
-        <div class="container is-max-desktop">
-            <div class="columns is-full-width">
-                <div class="column">
-                    <div class="content">
-                        <h3>Misc</h3>
-                        <h4>Re the Charts &#128200 </h4>
-                        Try clicking on the legend of the charts!
-                    </div>
-                    <div class="content">
-                        <h4>Re the Icon <img src="website/images/icon/icon.png" alt="logo" width="30" height="30" /></h4>
-                        <p>
-                            <b>Infinity:</b> Our environment is open-ended, which can be easily generalized to infinite open-ended tasks sets with our open-ended evaluator.
-                            <br>
-                            <b>Loop:</b> We use online reinforcement learning, which is closed-loop: the agent interacts with the environment and learns from its own trials and errors.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section" id="BibTeX">
-        <div class="container is-max-desktop content">
-            <h2 class="title">BibTeX</h2>
-            <pre><code>@article{bai2024digirl,
-title={DigiRL: Training In-The-Wild Device-Control Agents with Autonomous Reinforcement Learning},
-author={Bai, Hao and Zhou, Yifei and Cemri, Mert and Pan, Jiayi and Suhr, Alane and Levine, Sergey and Kumar, Aviral},
-journal={arXiv preprint arXiv:2406.11896},
-year={2024}
-}</code></pre>
-        </div>
     </section>
 
     <footer class="footer">
         <div align="center" class="container">
             <div class="columns is-centered">
-                <div class="content is-small">
+                <!--<div class="content is-small">
                     This website templated is borrowed from <a href="https://github.com/nerfies/nerfies.github.io">here</a> and <a href="https://xwang.dev/mint-bench/">here</a>.
-                </div>
+                </div>-->
             </div>
         </div>
     </footer>
