@@ -1,37 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <title>UniUGP</title>
     <link rel="icon" href="website/images/logo2.png" type="image/icon type">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
 
+    <!-- 图表相关脚本 -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
-    <script
-        src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.0.1/dist/chartjs-plugin-annotation.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.0.1/dist/chartjs-plugin-annotation.min.js"></script>
 
-    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+    <!-- 字体与样式库 -->
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Noto+Sans:wght@400;500;600&family=Castoro:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="website/css/bulma.min.css">
     <link rel="stylesheet" href="website/css/bulma-carousel.min.css">
     <link rel="stylesheet" href="website/css/bulma-slider.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
+    <!-- JQuery与组件脚本 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./website/javascript/bulma-carousel.min.js"></script>
     <script src="./website/javascript/bulma-slider.min.js"></script>
 
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
 
+    <!-- Tabulator表格 -->
     <link href="https://unpkg.com/tabulator-tables@5.5.2/dist/css/tabulator_bootstrap4.min.css" rel="stylesheet">
     <script type="text/javascript" src="https://unpkg.com/tabulator-tables@5.5.2/dist/js/tabulator.min.js"></script>
-    <!-- <script src="website/javascript/peity-vanilla.js"></script> -->
 
+    <!-- 自定义脚本 -->
     <script src="website/javascript/benchmark_table.js" type="module"></script>
     <script src="website/javascript/success_rate_vs_k_vis.js" type="module"></script>
     <script src="website/javascript/success_rate_vs_k_vis2.js" type="module"></script>
@@ -39,9 +44,10 @@
     <script src="website/javascript/feedback_provider_efficacy.js" type="module"></script>
     <script src="website/javascript/demos.js" type="module"></script>
 
+    <!-- 自定义样式 -->
     <link rel="stylesheet" href="website/css/index.css">
 
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-C7GJ4FYMY9"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -53,19 +59,165 @@
     <noscript>
         <p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101339888ns.gif" /></p>
     </noscript>
+
+    <style>
+        /* 全局样式重置与基础设置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-size: 16px;
+            line-height: 1.7;
+            color: #333;
+            background-color: #f9fafb;
+        }
+
+        /* 字体层级优化 */
+        h1, h2, h3, .title {
+            font-family: 'Google Sans', 'Noto Sans', sans-serif;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 1rem;
+        }
+
+        /* 标题样式 */
+        .publication-title {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 700;
+            line-height: 1.3;
+            color: #1936C9;
+            margin-bottom: 1.5rem !important;
+        }
+
+        .title.is-3 {
+            font-size: clamp(1.4rem, 3vw, 1.8rem);
+            color: #1a202c;
+            border-bottom: 2px solid #e8f0fe;
+            padding-bottom: 0.8rem;
+            margin-bottom: 1.5rem !important;
+        }
+
+        /* 章节卡片样式 */
+        .section-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            border: 1px solid #f5f7fa;
+            transition: box-shadow 0.2s ease;
+        }
+
+        .section-card:hover {
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+        }
+
+        /* 段落样式优化 */
+        .content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+            font-size: clamp(1rem, 1.5vw, 1.05rem);
+        }
+
+        .content p strong {
+            color: #1936C9;
+            font-weight: 600;
+        }
+
+        /* 作者信息样式 */
+        .publication-authors {
+            font-family: 'Google Sans', sans-serif;
+            font-size: clamp(1rem, 1.5vw, 1.1rem);
+            color: #4a5568;
+            line-height: 1.6;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.8rem 1.2rem;
+            margin-top: 1rem;
+        }
+
+        .author-block a {
+            color: #2563eb;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .author-block a:hover {
+            color: #1d4ed8;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        /* 图片样式 */
+        .content img {
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            margin: 1.5rem auto !important;
+        }
+
+        /* 图片说明文字 */
+        .figure-caption {
+            font-family: 'Castoro', serif;
+            font-size: clamp(0.9rem, 1.2vw, 0.95rem);
+            font-style: italic;
+            color: #6b7280;
+            text-align: center;
+            margin: 0.5rem 0 2rem 0 !important;
+            line-height: 1.6;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .section-card {
+                padding: 1.8rem 1.5rem;
+                margin-bottom: 2rem;
+            }
+
+            .publication-authors {
+                padding: 0 1rem;
+            }
+
+            .content p {
+                text-align: left;
+            }
+
+            .title.is-3 {
+                padding-bottom: 0.6rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .publication-title {
+                font-size: 1.8rem;
+            }
+
+            .section-card {
+                padding: 1.5rem 1rem;
+            }
+
+            .author-block {
+                display: block;
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 
-
 <body>
-    <section class="hero">
+    <section class="hero" style="background-color: #ffffff;">
         <div class="hero-body">
             <div class="container is-max-desktop">
                 <div class="columns is-centered">
                     <div class="column has-text-centered">
                         <h1 class="title publication-title">
-                            <img src="website/images/logo.png" alt="logo" width="300" height="40" /> &emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;
-                            <img src="website/images/logo3.png" alt="logo" width="200" height="40" /><br><br>
-                            <font color="#1936C9">UniUGP: Unifying Understanding, Generation, and Planning <br> For End-to-end Autonomous Driving</font>
+                            <img src="website/images/logo.png" alt="logo" width="300" height="40" style="margin-bottom: 0.5rem;" />
+                            <img src="website/images/logo3.png" alt="logo" width="200" height="40" style="margin-bottom: 0.5rem;" /><br>
+                            UniUGP: Unifying Understanding, Generation, and Planning <br> For End-to-end Autonomous Driving
                         </h1>
                         <div class="is-size-5 publication-authors">
                             <span class="author-block">
@@ -87,26 +239,27 @@
                                 <a href="https://www.yingcong.me/">Yangang Zhang</a>,
                             </span>
                             <span class="author-block">
-                                <a href="https://www.yingcong.me/">Yingcong Chen</a>,
+                                <a href="https://www.yingcong.me/">Yingcong Chen</a>
                             </span>
                         </div>
-                        
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section" id="abstract">
+    <section class="section" id="abstract" style="padding-top: 1rem; padding-bottom: 3rem;">
         <div class="container is-max-desktop">
             <!-- Abstract -->
             <div class="columns is-centered has-text-centered">
                 <div class="column is-four-fifths">
-                    <h2 class="title is-3">Abstract</h2>
-                    <div class="content has-text-justified">
-                        <p>
-                            Autonomous driving (AD) systems struggle in long-tail scenarios due to limited world knowledge and weak visual dynamic modeling. Existing vision-language-action (VLA)-based methods cannot leverage unlabeled videos for visual causal learning, while world model-based methods lack reasoning capabilities from large language models. In this paper, we construct multiple specialized datasets providing reasoning and planning annotations for complex scenarios. Then, a unified Understanding-Generation-Planning framework, named UniUGP, is proposed to synergize scene reasoning, future video generation, and trajectory planning through a hybrid expert architecture. By integrating pre-trained VLMs and video generation models, UniUGP leverages visual dynamics and semantic reasoning to enhance planning performance. Taking multi-frame observations and language instructions as input, it produces interpretable chain-of-thought reasoning, physically consistent trajectories, and coherent future videos. We introduce a four-stage training strategy that progressively builds these capabilities across multiple existing AD datasets, along with the proposed specialized datasets. Experiments demonstrate state-of-the-art performance in perception, reasoning, and decision-making, with superior generalization to challenging long-tail situations. <br>  
-                        </p>
+                    <div class="section-card">
+                        <h2 class="title is-3">Abstract</h2>
+                        <div class="content has-text-justified">
+                            <p>
+                                Autonomous driving (AD) systems struggle in long-tail scenarios due to limited world knowledge and weak visual dynamic modeling. Existing vision-language-action (VLA)-based methods cannot leverage unlabeled videos for visual causal learning, while world model-based methods lack reasoning capabilities from large language models. In this paper, we construct multiple specialized datasets providing reasoning and planning annotations for complex scenarios. Then, a unified Understanding-Generation-Planning framework, named UniUGP, is proposed to synergize scene reasoning, future video generation, and trajectory planning through a hybrid expert architecture. By integrating pre-trained VLMs and video generation models, UniUGP leverages visual dynamics and semantic reasoning to enhance planning performance. Taking multi-frame observations and language instructions as input, it produces interpretable chain-of-thought reasoning, physically consistent trajectories, and coherent future videos. We introduce a four-stage training strategy that progressively builds these capabilities across multiple existing AD datasets, along with the proposed specialized datasets. Experiments demonstrate state-of-the-art performance in perception, reasoning, and decision-making, with superior generalization to challenging long-tail situations.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -115,16 +268,18 @@
             <!-- Method -->
             <div class="columns is-centered has-text-centered">
                 <div class="column is-four-fifths">
-                    <h2 class="title is-3">Method</h2>
-                    <div class="content has-text-justified">
-                        <p>
-                            UniUGP is a unified Hybrid Expert framework for end-to-end autonomous driving, with three core experts (Understanding, Planning, Generation). It makes full use of pre-trained VLMs and generative models’ existing knowledge, uses the MoT architecture and reflected flow for advanced trajectory planning, and retains pre-trained video models’ visual causal ability when expanding generation capabilities. <br>  
-                        </p>
-                        <img src="website/images/pic1.png" alt="Illustration of UniUGP"
-                                style="margin: 0 auto; display: block; max-width: 1000px; width: 100%; height: auto;" /><br>
-                        <p>
-                            Fig.1 Illustration of UniUGP, a unified model with three hybrid experts. The understanding expert performs the next-token prediction for causal reasoning. The planning expert forms a MoT architecture with the understanding expert, and performs the velocity prediction in flow matching for production future actions. The generation expert is cascaded as a world model to produce future videos. <br>  
-                        </p>
+                    <div class="section-card">
+                        <h2 class="title is-3">Method</h2>
+                        <div class="content has-text-justified">
+                            <p>
+                                UniUGP is a unified Hybrid Expert framework for end-to-end autonomous driving, with three core experts (Understanding, Planning, Generation). It makes full use of pre-trained VLMs and generative models’ existing knowledge, uses the MoT architecture and reflected flow for advanced trajectory planning, and retains pre-trained video models’ visual causal ability when expanding generation capabilities.
+                            </p>
+                            <img src="website/images/pic1.png" alt="Illustration of UniUGP"
+                                style="margin: 0 auto; display: block; max-width: 1000px; width: 100%; height: auto;" />
+                            <p class="figure-caption">
+                                Fig.1 Illustration of UniUGP, a unified model with three hybrid experts. The understanding expert performs the next-token prediction for causal reasoning. The planning expert forms a MoT architecture with the understanding expert, and performs the velocity prediction in flow matching for production future actions. The generation expert is cascaded as a world model to produce future videos.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -133,19 +288,21 @@
             <!-- Dataset -->
             <div class="columns is-centered has-text-centered">
                 <div class="column is-four-fifths">
-                    <h2 class="title is-3">Dataset</h2>
-                    <div class="content has-text-justified">
-                        <p>
-                            To address the limitation of existing driving benchmarks (focused on structured scenes/simulators while ignoring long-tail events), we integrated heterogeneous datasets (Waymo-E2E, DADA2000, LaF, StHa, SOM, AADV) into a unified framework aligned with four cognitive competencies: Perception & Understanding, Causal CoT Reasoning, Planning & Decision-Making, and Instruction Following. For Perception & Understanding, three subtasks were designed: 1) Small long-tailed objects: True/False questions built from dataset segmentation labels, with diverse question templates to boost generalization; 2) Long-tailed accident prediction: True/False questions based on dataset abnormal labels and timestamps, using varied prompts; 3) Long-tailed accident relationship: Multiple-choice questions where distractors are filtered/selected (random 2/4 options), shuffled, and mapped to A/B/C/D labels, with questions asking to describe the current situation. <br>  
-                        </p>
-                        <p>
-                            For Causal CoT Reasoning, we leveraged future image sequences and ground-truth ego trajectories to ensure reasoning aligns with physical outcomes, requiring the chain to cover scene context, key interactive agents, their potential intentions, and justifications for the final driving action. Advanced VLMs were prompted with future planning results to generate accurate CoT, which was further manually calibrated. <br>  
-                        </p>
-                        <img src="website/images/pic2.png" alt="Dataset Construction Pipeline"
-                                style="margin: 0 auto; display: block; max-width: 1000px; width: 100%; height: auto;" /><br>
-                        <p>
-                            Dataset Construction Pipeline. This figure depicts the pipeline of data collection (integrating multiple challenging driving datasets) and data processing (featuring four task categories: understanding,  chain-of-thought, planning, and instruction following) to train and assess the cognitive abilities of end-to-end autonomous driving models within a unified QA framework. <br>  
-                        </p>
+                    <div class="section-card">
+                        <h2 class="title is-3">Dataset</h2>
+                        <div class="content has-text-justified">
+                            <p>
+                                To address the limitation of existing driving benchmarks (focused on structured scenes/simulators while ignoring long-tail events), we integrated heterogeneous datasets (Waymo-E2E, DADA2000, LaF, StHa, SOM, AADV) into a unified framework aligned with four cognitive competencies: Perception & Understanding, Causal CoT Reasoning, Planning & Decision-Making, and Instruction Following. For Perception & Understanding, three subtasks were designed: 1) Small long-tailed objects: True/False questions built from dataset segmentation labels, with diverse question templates to boost generalization; 2) Long-tailed accident prediction: True/False questions based on dataset abnormal labels and timestamps, using varied prompts; 3) Long-tailed accident relationship: Multiple-choice questions where distractors are filtered/selected (random 2/4 options), shuffled, and mapped to A/B/C/D labels, with questions asking to describe the current situation.
+                            </p>
+                            <p>
+                                For Causal CoT Reasoning, we leveraged future image sequences and ground-truth ego trajectories to ensure reasoning aligns with physical outcomes, requiring the chain to cover scene context, key interactive agents, their potential intentions, and justifications for the final driving action. Advanced VLMs were prompted with future planning results to generate accurate CoT, which was further manually calibrated.
+                            </p>
+                            <img src="website/images/pic2.png" alt="Dataset Construction Pipeline"
+                                style="margin: 0 auto; display: block; max-width: 1000px; width: 100%; height: auto;" />
+                            <p class="figure-caption">
+                                Dataset Construction Pipeline. This figure depicts the pipeline of data collection (integrating multiple challenging driving datasets) and data processing (featuring four task categories: understanding, chain-of-thought, planning, and instruction following) to train and assess the cognitive abilities of end-to-end autonomous driving models within a unified QA framework.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -154,13 +311,15 @@
             <!-- Training Recipe -->
             <div class="columns is-centered has-text-centered">
                 <div class="column is-four-fifths">
-                    <h2 class="title is-3">Training Recipe</h2>
-                    <div class="content has-text-justified">
-                        <p>
-                            We propose a four-stage sequential training framework: Stage 1 trains only the Understanding Expert on annotated long-tail data and ImpromptuVLA to build diverse driving scenario understanding; Stage 2 trains the Generation and Planning Experts using trajectory-equipped datasets (nuScenes, NuPlan, etc.) for visual dynamics and motion planning; Stage 3 fine-tunes the Understanding Expert with a self-annotated CoT dataset to integrate causal reasoning; Stage 4 jointly trains all three experts with mixed data from Stages 1–3. <br>  
-                        </p>
-                        <img src="website/images/pic3.png" alt="training framework"
-                                style="margin: 0 auto; display: block; max-width: 1000px; width: 100%; height: auto;" /><br>
+                    <div class="section-card">
+                        <h2 class="title is-3">Training Recipe</h2>
+                        <div class="content has-text-justified">
+                            <p>
+                                We propose a four-stage sequential training framework: Stage 1 trains only the Understanding Expert on annotated long-tail data and ImpromptuVLA to build diverse driving scenario understanding; Stage 2 trains the Generation and Planning Experts using trajectory-equipped datasets (nuScenes, NuPlan, etc.) for visual dynamics and motion planning; Stage 3 fine-tunes the Understanding Expert with a self-annotated CoT dataset to integrate causal reasoning; Stage 4 jointly trains all three experts with mixed data from Stages 1–3.
+                            </p>
+                            <img src="website/images/pic3.png" alt="training framework"
+                                style="margin: 0 auto; display: block; max-width: 1000px; width: 100%; height: auto;" />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -169,51 +328,51 @@
             <!-- Result -->
             <div class="columns is-centered has-text-centered">
                 <div class="column is-four-fifths">
-                    <h2 class="title is-3">Result</h2>
-                    <div class="content has-text-justified">
-                        <p><b>Reasoning ability.</b></p>
-                        <p>
-                            The world model forces VLA to learn visual causal inference, particularly focusing on distant objects to generate better future frames. This enables the VLA model to predict potential dangers in advance, thereby ensuring driving safety. <br>  
-                        </p>
-                        <img src="website/images/pic4.png" alt="Result"
-                                style="margin: 0 auto; display: block; max-width: 1000px; width: 100%; height: auto;" /><br>
-                        <p>
-                            The ablation experiment on the absence or presence of world model knowledge. The world model enables the VLA to pay more attention to future causal relationships, thereby focusing on the semantics of distant objects. <br>  
-                        </p>
-                        <br>
+                    <div class="section-card">
+                        <h2 class="title is-3">Result</h2>
+                        <div class="content has-text-justified">
+                            <p><strong>Reasoning ability.</strong></p>
+                            <p>
+                                The world model forces VLA to learn visual causal inference, particularly focusing on distant objects to generate better future frames. This enables the VLA model to predict potential dangers in advance, thereby ensuring driving safety.
+                            </p>
+                            <img src="website/images/pic4.png" alt="Result"
+                                style="margin: 0 auto; display: block; max-width: 1000px; width: 100%; height: auto;" />
+                            <p class="figure-caption">
+                                The ablation experiment on the absence or presence of world model knowledge. The world model enables the VLA to pay more attention to future causal relationships, thereby focusing on the semantics of distant objects.
+                            </p>
 
-                        <p><b>Generating ability.</b></p>
-                        <p>
-                            UniUGP can generate trajectories and weather control as shown in the figure. This proves that the generation capability of our method is effective. <br>  
-                        </p>
-                        <img src="website/images/pic5.png" alt="Result"
-                                style="margin: 0 auto; display: block; max-width: 1000px; width: 100%; height: auto;" /><br>
-                        <p>
-                            Trajectory-controlled generation visualization. By modifying the trajectories input into the generation model, we can control the generation of future frames in the video. This demonstrates the controllability of our generation technology. <br>  
-                        </p>
-                        <img src="website/images/pic6.png" alt="Result"
-                                style="margin: 0 auto; display: block; max-width: 1000px; width: 100%; height: auto;" /><br>
-                        <p>
-                            Video generation visualization with controllable weather conditions. Our model can generate videos of different weather conditions, which proves the efficiency of our generation model. <br>  
+                            <p><strong>Generating ability.</strong></p>
+                            <p>
+                                UniUGP can generate trajectories and weather control as shown in the figure. This proves that the generation capability of our method is effective.
+                            </p>
+                            <img src="website/images/pic5.png" alt="Result"
+                                style="margin: 0 auto; display: block; max-width: 1000px; width: 100%; height: auto;" />
+                            <p class="figure-caption">
+                                Trajectory-controlled generation visualization. By modifying the trajectories input into the generation model, we can control the generation of future frames in the video. This demonstrates the controllability of our generation technology.
+                            </p>
+                            <img src="website/images/pic6.png" alt="Result"
+                                style="margin: 0 auto; display: block; max-width: 1000px; width: 100%; height: auto;" />
+                            <p class="figure-caption">
+                                Video generation visualization with controllable weather conditions. Our model can generate videos of different weather conditions, which proves the efficiency of our generation model.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
             <!-- /Result -->
-            
         </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" style="background-color: #f9fafb; padding: 2rem 0; border-top: 1px solid #e5e7eb;">
         <div align="center" class="container">
             <div class="columns is-centered">
-                <!--<div class="content is-small">
-                    This website templated is borrowed from <a href="https://github.com/nerfies/nerfies.github.io">here</a> and <a href="https://xwang.dev/mint-bench/">here</a>.
-                </div>-->
+                <div class="content is-small" style="color: #6b7280; font-size: 0.9rem;">
+                    <!-- 可添加页脚信息，如版权、模板来源等 -->
+                </div>
             </div>
         </div>
     </footer>
 
 </body>
-
 
 </html>
